@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Cadastro de cliente</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/assets/fontawesome-free-6.2.0-web/css/fontawesome.css">
+        <link rel="stylesheet" href="../css/assets/fontawesome-free-6.2.0-web/css/brands.css">
+        <link rel="stylesheet" href="../css/assets/fontawesome-free-6.2.0-web/css/solid.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container d-flex">
+            <div class="d-ib">
+                <img src="../image/img_register.svg" alt="" srcset="">
+            </div>
+            <div class="section">
+                <div class="container">
+                    <div class="row full-height justify-content-center">
+                        <div class="col-12 text-center align-self-center pb-5">
+                            <div class="section pb-5 text-center">
+                                <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" disabled/>
+                                <div class="card-3d-wrap mx-auto">
+                                    <div class="card-3d-wrapper">
+                                        <div class="card-front">
+                                            <div class="center-wrap center-wrap-login">
+                                                <form class="login100-form validate-form flex-sb flex-w">
+                                                    <span class="login100-form-title p-b-51 bold pb-4">
+                                                    Entre
+                                                    </span>
+                                                    <div class="wrap-input100 validate-input m-b-16">
+                                                        <input class="input100" type="email" name="email" id="email_login" placeholder="Email" autocomplete="off">
+                                                        <span class="focus-input100"></span>
+                                                    </div>
+                                                    <div class="wrap-input100 validate-input m-b-16">
+                                                        <input class="input100" type="password" name="pass" id="pass_login" placeholder="Senha" autocomplete="off">
+                                                        <span class="focus-input100"></span>
+                                                    </div>
+                                                    <div class="container-login100-form-btn mt-3">
+                                                        <div class="close-reg">
+                                                            <a href="#" class="go-login rememberpassw" onclick="showRegister()">Criar minha conta</a>
+                                                            <a href="#" class="go-login" onclick="showRemember()">Esqueci minha senha</a>
+                                                        </div>
+                                                        <div class="btn-next">
+                                                            <button type="button" onclick="login()">
+                                                                <i class="fa-solid fa-circle-chevron-right mt-0"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="card-back">
+                                            <div class="center-wrap">
+                                                <form class="login100-form validate-form flex-sb flex-w mb-5">
+                                                    <span class="login100-form-title p-b-51 bold mb-3">
+                                                    Cadastro
+                                                    </span>
+                                                    <!-- <div class="div-exp">Faça parte da MedSys Intelligence, cadastre-se já!</div> -->
+                                                    <div class="wrap-input100 validate-input m-b-16">
+                                                        <input class="input100" type="text" name="username_reg" id="username_reg" placeholder="Nome completo" autocomplete="off">
+                                                        <span class="focus-input100"></span>
+                                                    </div>
+                                                    <div class="wrap-input100 validate-input m-b-16">
+                                                        <input class="input100" type="text" name="email_reg" id="email_reg" placeholder="Email" autocomplete="off">
+                                                        <span class="focus-input100"></span>
+                                                    </div>
+                                                    <div class="wrap-input100 validate-input m-b-16">
+                                                        <input class="input100" type="password" name="pass_reg" id="pass_reg" placeholder="Crie uma senha" autocomplete="off">
+                                                        <span class="focus-input100"></span>
+                                                    </div>
+                                                    <div class="wrap-input100 validate-input m-b-16">
+                                                        <input class="input100" type="password" name="passconfirm_reg" id="passconfirm_reg" placeholder="Confirme sua senha" autocomplete="off">
+                                                        <span class="focus-input100"></span>
+                                                    </div>
+                                                    <div class="container-login100-form-btn mt-3">
+                                                        <div class="close-reg">
+                                                            <a href="#" class="go-login" onclick="showLogin()">Já possuo uma conta</a>
+                                                        </div>
+                                                        <div class="btn-next">
+                                                            <button type="button" onclick="registerUser()">
+                                                                <i class="fa-solid fa-circle-check icon-check mt-0"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../assets/package/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
